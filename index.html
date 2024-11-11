@@ -54,7 +54,69 @@
             background-color: #006d7d;
             color: white;
         }
-       .captcha-box {
+
+        .captcha-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff6347, #f0e68c, #add8e6, #98fb98);
+    background-size: 400% 400%;
+    animation: gradientBackground 5s ease infinite, rotateText 2s infinite linear;
+    color: #004d4d;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gitter (Checkerboard) Effect */
+.captcha-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%) 0 0,
+                linear-gradient(180deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%) 0 0;
+    background-size: 10px 10px;
+    pointer-events: none;
+}
+
+/* Rotate Text */
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Smooth Background Transition */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.captcha-box span {
+    margin-right: 10px;
+}
+
     display: block;
     margin: 10px 0;
     padding: 10px;
