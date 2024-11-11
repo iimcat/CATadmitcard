@@ -150,6 +150,26 @@
     color: #008ea2;
 }
 
+/* Footer Styling */
+.footer {
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+
+/* Make the footer text smaller */
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -187,11 +207,19 @@
             </div>
             <button type="submit" class="btn btn-login">LOGIN</button>
             <div class="d-flex justify-content-between mt-3">
-                <button type="button" class="btn btn-secondary">FORGOT PASSWORD</button>
-                <button type="button" class="btn btn-secondary">CHANGE PASSWORD</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='https://cdn.digialm.com/EForms/configuredHtml/32842/89884/login.html'">FORGOT PASSWORD</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='https://cdn.digialm.com/EForms/loginAction.do?subAction=CandidateChangePassword&orgId=32842&formId=89884'">CHANGE PASSWORD</button>
             </div>
         </form>
     </div>
+
+
+    
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Version 15.01.01</p>
+        </div>
+    </footer>
 
     <script>
         // Generate random CAPTCHA
