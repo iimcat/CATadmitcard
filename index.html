@@ -55,8 +55,7 @@
             background-color: #006d7d;
             color: white;
         }
-
-        .captcha-box {
+.captcha-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,10 +67,11 @@
     border-radius: 5px;
     background: linear-gradient(45deg, #ff6347, #f0e68c, #add8e6, #98fb98);
     background-size: 400% 400%;
-    animation: gradientBackground 5s ease infinite, rotateText 2s infinite linear;
+    animation: gradientBackground 5s ease infinite, rotateBox 5s infinite linear;
     color: #004d4d;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Gitter (Checkerboard) Effect */
@@ -88,8 +88,8 @@
     pointer-events: none;
 }
 
-/* Rotate Text */
-@keyframes rotateText {
+/* Rotation Animation for the Box */
+@keyframes rotateBox {
     0% {
         transform: rotate(0deg);
     }
@@ -116,6 +116,10 @@
 
 .captcha-box span {
     margin-right: 10px;
+    /* Adding Text Shadow to make the text stand out */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Slight Rotation on the Text */
+    transform: rotate(-5deg);
 }
 
     display: block;
